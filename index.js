@@ -12,6 +12,8 @@ if (!process.env.WEPLAY_ROM) {
   process.exit(1);
 }
 
+process.title = 'weplay-emulator';
+
 // redis
 var redis = require('./redis')();
 var pubsub = require('./redis')();
