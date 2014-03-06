@@ -16,5 +16,5 @@ Then run it with the following ENV vars:
 - `WEPLAY_SAVE_INTERVAL` - state save frequency (`60000`)
 
 ```
-$ node index
+$ WEPLAY_ROM=path/to/rom.gb node index
 ```
