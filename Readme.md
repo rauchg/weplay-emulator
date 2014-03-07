@@ -18,3 +18,7 @@ Then run it with the following ENV vars:
 ```
 $ WEPLAY_ROM=path/to/rom.gb node index
 ```
+
+## License
+
+MIT
