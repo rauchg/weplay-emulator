@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "description": "",
   "dependencies": {
+    "debug": "0.7.4",
     "redis": "0.10.1",
     "gameboy": "0.1.0",
     "canvas": "1.1.3",
     "msgpack": "0.2.2",
-    "debug": "0.7.4"
+    "socket.io-emitter": "0.1.0"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }

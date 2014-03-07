@@ -16,7 +16,8 @@ process.title = 'weplay-emulator';
 
 // redis
 var redis = require('./redis')();
-var pubsub = require('./redis')();
+var sub = require('./redis')();
+var io = require('socket.io-emitter')(redis);
 
 // rom
 var file = process.env.WEPLAY_ROM;
@@ -44,7 +45,7 @@ function load(){
   });
 
   emu.on('frame', function(frame){
-    redis.publish('weplay:frame', frame);
+    io.emit('weplay:frame', frame);
     redis.set('weplay:frame', frame);
   });
 
@@ -74,8 +75,8 @@ function load(){
   }
 }
 
-pubsub.subscribe('weplay:move');
-pubsub.on('message', function(channel, move){
+sub.subscribe('weplay:move');
+sub.on('message', function(channel, move){
   if ('weplay:move' != channel) return;
   emu.move(move.toString());
 });
