@@ -45,7 +45,7 @@ function load(){
   });
 
   emu.on('frame', function(frame){
-    io.emit('weplay:frame', frame);
+    io.emit('frame', frame);
     redis.set('weplay:frame', frame);
   });
 
