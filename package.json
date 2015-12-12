@@ -8,7 +8,7 @@
     "gameboy": "0.1.0",
     "msgpack": "0.2.2",
     "redis": "0.10.1",
-    "socket.io-emitter": "0.3.0"
+    "socket.io-emitter": "1.0.0"
   },
   "scripts": {
     "start": "node index.js"
